@@ -6,6 +6,8 @@ It is also a public record of how I think and work. Alongside the personal mater
 
 This site favors useful thinking over polished certainty. Some entries will be small and immediate; others will grow through linking, revisiting, and revision.
 
+Read [How I built this site](./src/data/articles/how-i-built-this-site.md) for the build log: the stack, the content model, and the Cloudflare publishing pipeline.
+
 ## Stack
 
 - [Astro](https://astro.build/) 7 for the static site and content routing
