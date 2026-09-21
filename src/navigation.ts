@@ -7,7 +7,7 @@ export const headerData = {
     { text: 'Articles', href: getPermalink('/articles') },
     { text: 'Maps', href: getPermalink('/maps') },
   ],
-  actions: [{ text: 'Start here', href: getPermalink('/') }],
+  actions: [],
 };
 
 export const footerData = {

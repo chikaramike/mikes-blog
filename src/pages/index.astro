@@ -1,9 +1,10 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
 import { SITE, I18N } from 'astrowind:config';
 
 const metadata = {
-  title: 'A working garden of ideas',
+  title: 'A web log for ideas in motion',
   ignoreTitleTemplate: true,
   description: 'mikes.blog is a personal digital garden about leadership, technology, operations, and change.',
 };
@@ -18,10 +19,34 @@ const structuredData = {
 };
 
 const collections = [
-  { href: '/log', label: 'Log', description: 'Short observations, decisions, and working signals.' },
-  { href: '/notes', label: 'Notes', description: 'Ideas I am developing, testing, and returning to.' },
-  { href: '/articles', label: 'Articles', description: 'Longer arguments built from the work underneath.' },
-  { href: '/maps', label: 'Maps', description: 'Indexes that connect related ideas and paths.' },
+  {
+    href: '/log',
+    label: 'Log',
+    icon: 'tabler:history',
+    chipClass: 'bg-cyan-500/10 text-cyan-500 dark:bg-cyan-400/15 dark:text-cyan-300',
+    description: 'Short observations, decisions, and working signals.',
+  },
+  {
+    href: '/notes',
+    label: 'Notes',
+    icon: 'tabler:notebook',
+    chipClass: 'bg-pink-500/10 text-pink-500 dark:bg-pink-400/15 dark:text-pink-300',
+    description: 'Ideas I am developing, testing, and returning to.',
+  },
+  {
+    href: '/articles',
+    label: 'Articles',
+    icon: 'tabler:article',
+    chipClass: 'bg-violet-500/10 text-violet-500 dark:bg-violet-400/15 dark:text-violet-300',
+    description: 'Longer arguments built from the work underneath.',
+  },
+  {
+    href: '/maps',
+    label: 'Maps',
+    icon: 'tabler:map-2',
+    chipClass: 'bg-lime-500/10 text-lime-600 dark:bg-lime-400/15 dark:text-lime-300',
+    description: 'Indexes that connect related ideas and paths.',
+  },
 ];
 ---
 
@@ -32,11 +57,11 @@ const collections = [
   <section class="mx-auto max-w-5xl px-6 py-20 sm:py-28 lg:px-8">
     <p class="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary">mikes.blog</p>
     <h1 class="max-w-4xl text-5xl font-bold leading-tight tracking-tight font-heading sm:text-6xl lg:text-7xl">
-      A working garden for ideas about making change useful.
+      A web log for ideas in motion.
     </h1>
     <p class="mt-8 max-w-2xl text-xl leading-relaxed text-muted sm:text-2xl">
-      I am Mike, an ITM MBA and leader interested in digital transformation, operational improvement, and the human
-      systems that make both possible.
+      I'm Mike. I'm interested in digital transformation, operational improvement, and the human systems that make both
+      possible.
     </p>
     <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
       This is where I keep the thoughts, notes, arguments, and connections that are still becoming clear.
@@ -60,7 +85,10 @@ const collections = [
       {
         collections.map((collection) => (
           <a class="bg-page p-6 transition hover:bg-slate-50 dark:hover:bg-slate-900" href={collection.href}>
-            <h2 class="text-xl font-bold font-heading">{collection.label}</h2>
+            <span class={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${collection.chipClass}`}>
+              <Icon name={collection.icon} class="h-6 w-6" aria-hidden="true" />
+            </span>
+            <h2 class="mt-4 text-xl font-bold font-heading">{collection.label}</h2>
             <p class="mt-3 text-muted">{collection.description}</p>
             <span class="mt-6 inline-block text-sm font-semibold text-primary">
               Explore {collection.label.toLowerCase()} &rarr;
