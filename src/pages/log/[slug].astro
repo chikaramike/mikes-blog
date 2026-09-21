@@ -1,0 +1,22 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('log', ({ data }) => !data.draft);
+  return entries.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const metadata = { title: entry.data.title, description: 'A log entry from mikes.blog.' };
+---
+
+<PageLayout metadata={metadata}>
+  <article class="mx-auto max-w-3xl px-6 py-16 sm:py-24 lg:px-8">
+    <a class="text-sm font-semibold text-primary hover:underline" href="/log">&larr; Back to log</a>
+    <p class="mt-10 text-sm text-muted">{entry.data.publishDate?.toLocaleDateString('en-US', { dateStyle: 'long' })}</p>
+    <h1 class="mt-3 text-4xl font-bold font-heading sm:text-5xl">{entry.data.title}</h1>
+    <div class="prose prose-lg mt-10 max-w-none dark:prose-invert"><Content /></div>
+  </article>
+</PageLayout>

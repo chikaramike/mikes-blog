@@ -1,0 +1,48 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const entries = (await getCollection('notes', ({ data }) => !data.draft)).sort(
+  (left, right) => (right.data.publishDate?.valueOf() ?? 0) - (left.data.publishDate?.valueOf() ?? 0)
+);
+const renderedEntries = await Promise.all(
+  entries.map(async (entry) => ({ entry, Content: (await render(entry)).Content }))
+);
+const metadata = { title: 'Notes', description: 'Developing ideas and working material from Mike.' };
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-4xl px-6 py-16 sm:py-24 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Collection / Notes</p>
+    <h1 class="mt-4 text-5xl font-bold font-heading">Ideas in progress.</h1>
+    <p class="mt-6 max-w-2xl text-xl leading-relaxed text-muted">
+      Working material that becomes clearer through revision, use, and connection.
+    </p>
+    <div class="mt-14 divide-y divide-slate-200 dark:divide-slate-700">
+      {
+        renderedEntries.map(({ entry, Content }) => (
+          <article class="py-8 first:pt-0 last:pb-0">
+            <div class="flex flex-wrap gap-2 text-sm text-muted">
+              <>
+                <span>Status: {entry.data.stage}</span>
+                <span>/</span>
+                <span>Type: {entry.data.kind}</span>
+              </>
+            </div>
+            <h2 class="mt-2 text-2xl font-bold font-heading">
+              <a class="hover:text-primary" href={`/notes/${entry.id}`}>
+                {entry.data.title}
+              </a>
+            </h2>
+            <div class="prose prose-lg mt-4 max-w-none dark:prose-invert">
+              <Content />
+            </div>
+            <a class="mt-4 inline-block font-semibold text-primary hover:underline" href={`/notes/${entry.id}`}>
+              Read note &rarr;
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

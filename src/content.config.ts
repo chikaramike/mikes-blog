@@ -47,6 +47,15 @@ const metadataDefinition = () =>
     })
     .optional();
 
+const gardenDocumentDefinition = () =>
+  z.object({
+    title: z.string(),
+    publishDate: z.date().optional(),
+    updateDate: z.date().optional(),
+    draft: z.boolean().optional(),
+    tags: z.array(z.string()).optional(),
+  });
+
 const postCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/post' }),
   schema: z.object({
@@ -68,6 +77,43 @@ const postCollection = defineCollection({
   }),
 });
 
+const logCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/log' }),
+  schema: gardenDocumentDefinition().extend({
+    summary: z.string(),
+  }),
+});
+
+const noteCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/notes' }),
+  schema: gardenDocumentDefinition().extend({
+    kind: z.enum(['review', 'literature', 'permanent', 'fleeting']),
+    stage: z.enum(['seedling', 'budding', 'evergreen']),
+  }),
+});
+
+const articleCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/articles' }),
+  schema: gardenDocumentDefinition().extend({
+    excerpt: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    sources: z.array(z.string()),
+  }),
+});
+
+const mapCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/maps' }),
+  schema: gardenDocumentDefinition().extend({
+    description: z.string().optional(),
+    links: z.array(z.string()).optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
+  log: logCollection,
+  notes: noteCollection,
+  articles: articleCollection,
+  maps: mapCollection,
 };
