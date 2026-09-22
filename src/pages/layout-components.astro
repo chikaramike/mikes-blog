@@ -1,0 +1,628 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Note from '~/components/widgets/Note.astro';
+import SocialProof from '~/components/widgets/SocialProof.astro';
+import QuickStart from '~/components/widgets/QuickStart.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FeatureTabs from '~/components/widgets/FeatureTabs.astro';
+import Content from '~/components/widgets/Content.astro';
+import Bento from '~/components/widgets/Bento.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Timeline from '~/components/widgets/Timeline.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Comparison from '~/components/widgets/Comparison.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Quote from '~/components/widgets/Quote.astro';
+import Team from '~/components/widgets/Team.astro';
+import Projects from '~/components/widgets/Projects.astro';
+import Gallery from '~/components/widgets/Gallery.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Integrations from '~/components/widgets/Integrations.astro';
+import Video from '~/components/widgets/Video.astro';
+import Countdown from '~/components/widgets/Countdown.astro';
+import Newsletter from '~/components/widgets/Newsletter.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import StickyCTA from '~/components/widgets/StickyCTA.astro';
+
+// Reference-only page: catalogs every widget shipped with AstroWind so it's easy
+// to see what's available when building a new page. Not meant to be indexed.
+const metadata = {
+  title: 'Layout components reference',
+  ignoreTitleTemplate: true,
+  robots: { index: false, follow: false },
+};
+
+// Small label shown above each widget so it's obvious which component produced it.
+const label = (name: string) => name;
+---
+
+<Layout metadata={metadata}>
+  <section class="mx-auto max-w-4xl px-6 pt-16 pb-4">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Reference page</p>
+    <h1 class="mt-4 text-4xl font-bold font-heading sm:text-5xl">Layout &amp; components catalog</h1>
+    <p class="mt-4 text-lg text-muted">
+      Every widget shipped with AstroWind (<code>src/components/widgets/</code>), rendered with sample content so you
+      can see what each one looks like before picking it for a page. This page is not linked for SEO and is excluded
+      from search indexing.
+    </p>
+  </section>
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Hero.astro')}
+  </div>
+  <Hero
+    tagline="Free & open source"
+    actions={[
+      { variant: 'primary', text: 'Primary action', href: '#' },
+      { text: 'Secondary action', href: '#' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Hero image' }}
+  >
+    <Fragment slot="title">
+      A big headline for the <span class="text-accent dark:text-white">Hero</span> widget
+    </Fragment>
+    <Fragment slot="subtitle">
+      The main widget for a homepage or landing page: tagline, title, subtitle, image and up to two call-to-action
+      buttons.
+    </Fragment>
+  </Hero>
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Hero2.astro')}
+  </div>
+  <Hero2
+    tagline="Alternate hero layout"
+    actions={[
+      { variant: 'primary', text: 'Get started', href: '#' },
+      { text: 'Learn more', href: '#' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Hero2 image',
+    }}
+  >
+    <Fragment slot="title"
+      >A different composition of the same <span class="text-accent dark:text-white">Hero</span> idea</Fragment
+    >
+    <Fragment slot="subtitle"
+      >Same props as Hero, arranged differently. Useful for variety across home page demos.</Fragment
+    >
+  </Hero2>
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('HeroText.astro')}
+  </div>
+  <HeroText
+    tagline="Simple pages"
+    title="A text-only hero"
+    subtitle="No image: good for pricing, contact, or other pages that get to the point."
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Note.astro')}
+  </div>
+  <Note
+    title="Note.astro:"
+    description="A one-line callout, usually placed right under a Hero to explain 'why it works' or add a short aside."
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('SocialProof.astro')}
+  </div>
+  <SocialProof
+    items={[
+      { value: '#1', label: 'sample stat', icon: 'tabler:star-filled', color: 'text-amber-400' },
+      { value: '4.9/5', label: 'average rating', icon: 'tabler:star-filled', rating: 5 },
+      { value: '100', label: 'Lighthouse score', icon: 'tabler:gauge', color: 'text-emerald-500' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('QuickStart.astro')}
+  </div>
+  <QuickStart
+    tagline="TL;DR"
+    title="One command, one terminal"
+    subtitle="A tagline, a copyable command block and a short list of items."
+    commands={['npm create astro@latest -- --template arthelokyo/astrowind']}
+    items={[
+      { title: 'Step one', description: 'Answer the prompts.', icon: 'tabler:terminal-2' },
+      { title: 'Step two', description: 'Run npm run dev.', icon: 'tabler:player-play' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Features.astro (columns 2-4)')}
+  </div>
+  <Features
+    tagline="Features"
+    title="A grid of icon + title + description"
+    subtitle="The most common widget for listing benefits or capabilities."
+    columns={3}
+    items={[
+      { title: 'Fast', description: 'Static output, optimized images.', icon: 'tabler:rocket' },
+      { title: 'Flexible', description: 'Every section is a widget with props.', icon: 'tabler:components' },
+      { title: 'Accessible', description: 'Semantic HTML, keyboard support.', icon: 'tabler:accessible' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Features2.astro (compact icon grid)')}
+  </div>
+  <Features2
+    tagline="Components"
+    title="A denser variant of Features"
+    subtitle="Good for a longer list of small items, e.g. 6-9 entries."
+    items={[
+      { title: 'Headers', description: 'Site navigation.', icon: 'flat-color-icons:template' },
+      { title: 'Heroes', description: 'The big first section.', icon: 'flat-color-icons:gallery' },
+      { title: 'Footers', description: 'Bottom-of-page links.', icon: 'flat-color-icons:database' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Features3.astro (with optional side image)')}
+  </div>
+  <Features3
+    title="Another Features variant"
+    subtitle="Can render with or without an accompanying image; supports isBeforeContent / isAfterContent to pair with a Content widget."
+    columns={3}
+    items={[
+      { title: 'Tiered plans', description: 'Multiple pricing options.', icon: 'tabler:stairs' },
+      { title: 'Transparent', description: 'No hidden costs.', icon: 'tabler:flip-vertical' },
+      { title: 'Secure', description: 'Protects sensitive data.', icon: 'tabler:shield-lock' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('FeatureTabs.astro')}
+  </div>
+  <FeatureTabs
+    tagline="Key features"
+    title="Clickable tabs, each with its own image"
+    subtitle="Good for showing several distinct capabilities without a long scroll."
+    items={[
+      {
+        title: 'Ready-made widgets',
+        description: 'Compose a page from pre-built sections.',
+        icon: 'tabler:components',
+        image: {
+          src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+          alt: 'Widgets',
+        },
+      },
+      {
+        title: 'Blog support',
+        description: 'Markdown/MDX posts with categories and tags.',
+        icon: 'tabler:article',
+        image: {
+          src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80',
+          alt: 'Blog',
+        },
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Content.astro (image + text, isReversed / isAfterContent)')}
+  </div>
+  <Content
+    tagline="Inside template"
+    title="Text next to an image"
+    items={[
+      { title: 'Point one', description: 'Short supporting detail.' },
+      { title: 'Point two', description: 'Another supporting detail.' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Content image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">A content headline</h3>
+      Free-form content goes in the "content" slot, above the list of items.
+    </Fragment>
+  </Content>
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Bento.astro (variable-span cards)')}
+  </div>
+  <Bento
+    title="A bento-box style grid"
+    subtitle="Some cards can span 2 columns and include an image."
+    items={[
+      {
+        title: 'A wide card',
+        description: 'This item uses span: 2 and an image.',
+        icon: 'tabler:layers-union',
+        span: 2,
+        image: {
+          src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+          alt: 'Bento image',
+        },
+      },
+      { title: 'A normal card', description: 'No span, no image.', icon: 'tabler:artboard' },
+      { title: 'Another card', description: 'Just icon, title, description.', icon: 'tabler:writing' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Steps.astro (vertical, numbered, image on the side)')}
+  </div>
+  <Steps
+    title="A numbered list of steps"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Do this</span>',
+        description: 'Details for step one.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Then this</span>',
+        description: 'Details for step two.',
+        icon: 'tabler:number-2',
+      },
+      { title: 'Done', icon: 'tabler:check' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Steps2.astro (horizontal cards, no image, optional CTA)')}
+  </div>
+  <Steps2
+    tagline="How it works"
+    title="A grid version of Steps"
+    subtitle="No side image; can end with a call-to-action button."
+    callToAction={{ text: 'Call to action', href: '#', variant: 'primary' }}
+    items={[
+      { title: 'First', description: 'What happens first.', icon: 'tabler:number-1' },
+      { title: 'Second', description: 'What happens next.', icon: 'tabler:number-2' },
+      { title: 'Third', description: 'What happens last.', icon: 'tabler:number-3' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Timeline.astro')}
+  </div>
+  <Timeline
+    tagline="Our story"
+    title="A dated timeline"
+    layout="alternate"
+    items={[
+      { date: '2022', title: 'It started', description: 'A short milestone description.', icon: 'tabler:rocket' },
+      { date: '2024', title: 'It grew', description: 'Another milestone.', icon: 'tabler:users-group' },
+      {
+        date: '2026',
+        title: 'Highlighted milestone',
+        description: 'Use highlight to make one entry stand out.',
+        icon: 'tabler:sparkles',
+        highlight: true,
+      },
+      { icon: 'tabler:dots', ghost: true },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Stats.astro')}
+  </div>
+  <Stats
+    countUp
+    stats={[
+      { title: 'Widgets', amount: '34' },
+      { title: 'Layouts', amount: '4' },
+      { title: 'Lighthouse score', amount: '100' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Pricing.astro')}
+  </div>
+  <Pricing
+    title="Pricing tiers"
+    subtitle="Cards with a highlighted / ribboned option."
+    prices={[
+      {
+        title: 'basic',
+        subtitle: 'For individuals',
+        price: 12,
+        period: 'per month',
+        items: [{ description: 'Feature one' }, { description: 'Feature two' }],
+        callToAction: { text: 'Choose plan', href: '#' },
+      },
+      {
+        title: 'pro',
+        subtitle: 'For small teams',
+        price: 29,
+        period: 'per month',
+        items: [{ description: 'Everything in basic' }, { description: 'Feature three' }],
+        callToAction: { text: 'Choose plan', href: '#' },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+        highlight: true,
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Comparison.astro')}
+  </div>
+  <Comparison
+    tagline="Compare plans"
+    title="A feature comparison table"
+    firstColumnLabel="Features"
+    columns={[
+      { title: 'Basic', callToAction: { text: 'Choose', href: '#' } },
+      { title: 'Pro', highlight: true, callToAction: { text: 'Choose', href: '#' } },
+    ]}
+    rows={[
+      { group: 'Core', label: 'Projects', values: ['1', 'Unlimited'] },
+      { group: 'Core', label: 'Custom domain', values: [false, true] },
+      { group: 'Support', label: 'Priority support', values: [false, true] },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Testimonials.astro (grid or masonry layout)')}
+  </div>
+  <Testimonials
+    title="What people say"
+    testimonials={[
+      {
+        testimonial: 'A short quote about the experience.',
+        name: 'Cary Kennedy',
+        job: 'Film director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80',
+          alt: 'Cary Kennedy',
+        },
+        rating: 5,
+      },
+      {
+        testimonial: 'Another quote, this one a bit longer to show how the card wraps text.',
+        name: 'Josh Wilkinson',
+        job: 'Product manager',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?auto=format&fit=crop&w=400&q=80',
+          alt: 'Josh Wilkinson',
+        },
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Quote.astro (one large testimonial)')}
+  </div>
+  <Quote
+    quote="A single, large testimonial given the full width of the page, for when one quote should carry more weight than a grid of small cards."
+    name="Emily Martinez"
+    job="CEO"
+    image={{
+      src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=200&q=80',
+      alt: 'Emily Martinez',
+    }}
+    rating={5}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Team.astro')}
+  </div>
+  <Team
+    tagline="The people"
+    title="Meet the team"
+    members={[
+      {
+        name: 'Alicia Rivera',
+        role: 'Founder & CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?auto=format&fit=crop&w=400&q=80',
+          alt: 'Alicia Rivera',
+        },
+        bio: 'A short one-line bio.',
+        socials: [{ icon: 'tabler:brand-linkedin', href: '#', ariaLabel: 'LinkedIn' }],
+      },
+      {
+        name: 'Daniel Okafor',
+        role: 'Lead developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+          alt: 'Daniel Okafor',
+        },
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Projects.astro (portfolio / case study cards)')}
+  </div>
+  <Projects
+    title="Selected work"
+    items={[
+      {
+        title: 'A project title',
+        description: 'What the project was about.',
+        image: {
+          src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?auto=format&fit=crop&w=600&q=80',
+          alt: 'Project image',
+        },
+        tags: ['Branding', 'Web'],
+        result: '+24% conversion after launch',
+        href: '#',
+      },
+      {
+        title: 'Another project',
+        description: 'A shorter case study.',
+        image: {
+          src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=600&q=80',
+          alt: 'Project image',
+        },
+        tags: ['Print'],
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Gallery.astro (image grid with lightbox)')}
+  </div>
+  <Gallery
+    tagline="Gallery"
+    title="A clickable image grid"
+    images={[
+      {
+        src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80',
+        alt: 'Image one',
+        caption: 'Caption one',
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80',
+        alt: 'Image two',
+        caption: 'Caption two',
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80',
+        alt: 'Image three',
+        caption: 'Caption three',
+      },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Brands.astro (grid or marquee variant)')}
+  </div>
+  <Brands
+    variant="marquee"
+    grayscale
+    boxed={false}
+    title="Logo strip"
+    icons={[]}
+    images={[
+      { src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png', alt: 'Paypal' },
+      { src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png', alt: 'Visa' },
+      { src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png', alt: 'Ebay' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Integrations.astro')}
+  </div>
+  <Integrations
+    tagline="Works with your stack"
+    title="A grid of tool/integration cards"
+    items={[
+      { name: 'Astro', description: 'Framework', icon: 'tabler:brand-astro', href: 'https://astro.build' },
+      { name: 'Tailwind CSS', description: 'Styling', icon: 'tabler:brand-tailwind', href: 'https://tailwindcss.com' },
+      { name: 'TypeScript', description: 'Typed props' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Video.astro (poster loads, player embeds on click)')}
+  </div>
+  <Video
+    tagline="In action"
+    title="An embedded video"
+    youtube="dsTXcSeAZq8"
+    videoTitle="Sample video"
+    poster={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Video poster',
+    }}
+    caption="Only the poster loads with the page; the player embeds on click."
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Countdown.astro')}
+  </div>
+  <Countdown
+    tagline="Launch day"
+    title="Counts down to a date"
+    date="2026-12-01T09:00:00Z"
+    expiredText="It launched!"
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Newsletter.astro (one-field signup band)')}
+  </div>
+  <Newsletter
+    title="Subscribe"
+    subtitle="A single email field and a button. Ships without a backend; wire it up in Form.astro."
+    disclaimer="No spam, unsubscribe anytime."
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('Contact.astro (a full contact form)')}
+  </div>
+  <Contact
+    title="Get in touch"
+    subtitle="Name, email and message fields, with a consent checkbox."
+    inputs={[
+      { type: 'text', name: 'name', label: 'Name' },
+      { type: 'email', name: 'email', label: 'Email' },
+    ]}
+    textarea={{ label: 'Message' }}
+    disclaimer={{ label: 'By submitting this form, you agree to be contacted back.' }}
+  />
+
+  <div class="mx-auto max-w-4xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('FAQs.astro (optional FAQPage schema)')}
+  </div>
+  <FAQs
+    title="Frequently asked questions"
+    schema
+    items={[
+      { title: 'What is this page?', description: 'A living catalog of every widget available for building pages.' },
+      { title: 'Is it linked anywhere public?', description: 'Only from the footer, for quick personal reference.' },
+    ]}
+  />
+
+  <div class="mx-auto max-w-6xl px-6 pb-2 pt-6 text-xs font-bold uppercase tracking-wider text-primary">
+    {label('CallToAction.astro')}
+  </div>
+  <CallToAction actions={[{ variant: 'primary', text: 'Call to action', href: '#' }]}>
+    <Fragment slot="title">One last nudge</Fragment>
+    <Fragment slot="subtitle">Usually the final widget on a page, right before the footer.</Fragment>
+  </CallToAction>
+
+  <section class="mx-auto max-w-4xl px-6 py-16">
+    <h2 class="text-2xl font-bold font-heading">Other pieces</h2>
+    <ul class="mt-4 list-disc space-y-2 pl-5 text-muted">
+      <li>
+        <strong>Layouts</strong> (<code>src/layouts/</code>): <code>PageLayout.astro</code> (standard header/footer page,
+        used by this page), <code>LandingLayout.astro</code> (no header/footer, for focused landing pages), <code
+          >MarkdownLayout.astro</code
+        > (wraps blog posts), <code>Layout.astro</code> (base HTML shell both extend).
+      </li>
+      <li>
+        <strong>UI primitives</strong> (<code>src/components/ui/</code>): <code>Button.astro</code>, <code
+          >Form.astro</code
+        >, <code>Headline.astro</code> (the tagline/title/subtitle used by most widgets above), <code
+          >Timeline.astro</code
+        >, <code>WidgetWrapper.astro</code> (the section/background wrapper every widget above uses).
+      </li>
+      <li>
+        <strong>Blog widgets</strong> (<code>BlogHighlightedPosts.astro</code>, <code>BlogLatestPosts.astro</code>)
+        aren't shown here because the blog is disabled in <code>src/config.yaml</code> (<code
+          >apps.blog.isEnabled: false</code
+        >).
+      </li>
+      <li>
+        <strong>StickyCTA.astro</strong> is active on this page (mobile only): scroll down to see it slide up from the bottom.
+      </li>
+    </ul>
+  </section>
+
+  <StickyCTA text="Sticky CTA example" href="#" label="This is StickyCTA.astro" />
+</Layout>

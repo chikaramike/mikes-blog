@@ -29,6 +29,7 @@ export const footerData = {
         { text: 'Home', href: getPermalink('/') },
         { text: 'Privacy', href: getPermalink('/privacy') },
         { text: 'Terms', href: getPermalink('/terms') },
+        { text: 'Layout components', href: getPermalink('/layout-components') },
       ],
     },
   ],
