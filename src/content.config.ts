@@ -54,6 +54,7 @@ const gardenDocumentDefinition = () =>
     updateDate: z.date().optional(),
     draft: z.boolean().optional(),
     tags: z.array(z.string()).optional(),
+    people: z.array(z.string()).optional(),
   });
 
 const postCollection = defineCollection({
@@ -110,10 +111,49 @@ const mapCollection = defineCollection({
   }),
 });
 
+const toolCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/tools' }),
+  schema: gardenDocumentDefinition().extend({
+    description: z.string(),
+    category: z.string(),
+    website: z.url(),
+    actionLabel: z.string().optional(),
+    affiliateUrl: z.url().optional(),
+    resources: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.url(),
+          type: z.enum(['documentation', 'article', 'video']),
+        })
+      )
+      .optional(),
+  }),
+});
+
+const peopleCollection = defineCollection({
+  loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/people' }),
+  schema: gardenDocumentDefinition().extend({
+    description: z.string(),
+    homepage: z.url().optional(),
+    links: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.url(),
+        })
+      )
+      .optional(),
+    relatedPeople: z.array(z.string()).optional(),
+  }),
+});
+
 export const collections = {
   post: postCollection,
   log: logCollection,
   notes: noteCollection,
   articles: articleCollection,
   maps: mapCollection,
+  tools: toolCollection,
+  people: peopleCollection,
 };

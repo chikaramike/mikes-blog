@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '~/layouts/PageLayout.astro';
+
+const entries = (await getCollection('tools', ({ data }) => !data.draft)).sort((left, right) =>
+  left.data.title.localeCompare(right.data.title)
+);
+const entriesByCategory = entries.reduce<Record<string, typeof entries>>((groups, entry) => {
+  (groups[entry.data.category] ??= []).push(entry);
+  return groups;
+}, {});
+const metadata = { title: 'Tools', description: 'The tools I use and appreciate, with useful ways to learn more.' };
+---
+
+<PageLayout metadata={metadata}>
+  <section class="mx-auto max-w-4xl px-6 py-16 sm:py-24 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Collection / Toolkit</p>
+    <h1 class="mt-4 text-5xl font-bold font-heading">Tools I use and appreciate.</h1>
+    <p class="mt-6 max-w-2xl text-xl leading-relaxed text-muted">
+      A growing record of the software and services that support my work, with context for why each one earns a place.
+    </p>
+    <p class="mt-6 max-w-2xl text-sm leading-relaxed text-muted">
+      Some links may be affiliate links. They never change what you pay, and they help support this site.
+    </p>
+    <div class="mt-14 space-y-14">
+      {
+        Object.entries(entriesByCategory).map(([category, categoryEntries]) => (
+          <section aria-labelledby={`category-${category}`}>
+            <h2 id={`category-${category}`} class="text-2xl font-bold font-heading">
+              {category}
+            </h2>
+            <div class="mt-6 divide-y divide-slate-200 dark:divide-slate-700">
+              {categoryEntries.map((entry) => (
+                <article class="py-6 first:pt-0 last:pb-0">
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="text-xl font-bold font-heading">
+                      <a class="hover:text-primary" href={`/tools/${entry.id}`}>
+                        {entry.data.title}
+                      </a>
+                    </h3>
+                    {entry.data.affiliateUrl && <span class="text-sm text-muted">Affiliate link available</span>}
+                  </div>
+                  <p class="mt-2 max-w-2xl leading-relaxed text-muted">{entry.data.description}</p>
+                  <a class="mt-3 inline-block font-semibold text-primary hover:underline" href={`/tools/${entry.id}`}>
+                    Explore {entry.data.title} &rarr;
+                  </a>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

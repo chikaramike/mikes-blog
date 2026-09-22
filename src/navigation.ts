@@ -6,6 +6,7 @@ export const headerData = {
     { text: 'Notes', href: getPermalink('/notes') },
     { text: 'Articles', href: getPermalink('/articles') },
     { text: 'Maps', href: getPermalink('/maps') },
+    { text: 'Tools', href: getPermalink('/tools') },
   ],
   actions: [],
 };
@@ -19,6 +20,7 @@ export const footerData = {
         { text: 'Notes', href: getPermalink('/notes') },
         { text: 'Articles', href: getPermalink('/articles') },
         { text: 'Maps', href: getPermalink('/maps') },
+        { text: 'Tools', href: getPermalink('/tools') },
       ],
     },
     {
