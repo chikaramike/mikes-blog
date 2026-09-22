@@ -13,9 +13,9 @@ links:
 
 This map follows one idea through all four garden forms:
 
-1. Start with the [log entry](/log/starting-an-astro-site), where the decision is captured while it is fresh.
-2. Move to the [note](/notes/astro-site-as-a-system), where the structure gets a clearer shape.
-3. Read the [article](/articles/building-an-astro-site-as-a-small-system), where the idea becomes a longer argument.
+1. Start with the [log entry](../log/starting-an-astro-site.md), where the decision is captured while it is fresh.
+2. Move to the [note](../notes/astro-site-as-a-system.md), where the structure gets a clearer shape.
+3. Read the [article](../articles/building-an-astro-site-as-a-small-system.md), where the idea becomes a longer argument.
 4. Return to this map when more related pieces are added.
 
 The loop is intentional. A map is not only a directory; it is a way to show how a thought changes as it moves through the garden.

@@ -71,7 +71,7 @@ const articleCollection = defineCollection({
 
 The `sources` field matters most to me. Every article points back to the logs and notes that fed it, so the history of an idea stays visible. That turns the site from a stack of pages into a connected system.
 
-I wrote about the reasoning in [Building an Astro site as a small system](/articles/building-an-astro-site-as-a-small-system). That post is the philosophy; this one is the log of the work.
+I wrote about the reasoning in [Building an Astro site as a small system](./building-an-astro-site-as-a-small-system.md). That post is the philosophy; this one is the log of the work.
 
 ## What I changed to make it mine
 

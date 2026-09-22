@@ -46,6 +46,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash.merge": "^4.6.9",
+    "@types/mdast": "^4.0.4",
     "@types/mdx": "^2.0.14",
     "@typescript-eslint/eslint-plugin": "^8.66.0",
     "@typescript-eslint/parser": "^8.66.0",
@@ -63,7 +64,8 @@
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.66.0"
+    "typescript-eslint": "^8.66.0",
+    "unist-util-visit": "^5.1.0"
   },
   "overrides": {
     "yaml": ">=2.8.3",
