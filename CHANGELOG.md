@@ -10,6 +10,7 @@ All notable changes to `mikes.blog` are recorded here.
 - Added first-person seed content for the log, notes, articles, and maps collections.
 - Replaced AstroWind live branding and navigation with the initial `mikes.blog` identity.
 - Added simple placeholder pages for privacy, terms, and 404 handling.
+- Configured VS Code to use the workspace Prettier for Astro and Markdown, including the local Astro plugin.
 
 ## 2026-09-21
 
