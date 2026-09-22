@@ -22,6 +22,12 @@ Before implementing a project-specific task (disabling the blog, Open Graph imag
 
 **Node.js requirement:** >= 22.22.3
 
+## Deployment
+
+The live site is hosted on Cloudflare Workers as static assets. The deployment configuration is in `wrangler.jsonc`, which points Cloudflare at `dist/`.
+
+Before deploying, run `npm run build`, then publish with `npx wrangler deploy`. GitHub Actions validates pushes to `main` but does not deploy them. Do not assume Netlify is the publishing provider for this project.
+
 ## Architecture
 
 ### Directory Structure
