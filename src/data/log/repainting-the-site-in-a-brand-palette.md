@@ -1,14 +1,14 @@
 ---
-title: 'Repainting the site in Chikara.Co'
+title: 'Repainting the site in a brand palette'
 publishDate: 2026-10-30T00:00:00Z
-summary: 'The blog now wears the Chikara.Co brand guide in its cool graphite mode, with a dark theme built from the same ramps and a rollback that takes one command.'
+summary: 'The blog now wears a cool graphite brand palette, with a dark theme built from the same ramps and a rollback that takes one command.'
 tags:
   - astro
   - design
   - garden
 ---
 
-I moved the blog onto the Chikara.Co brand guide today. Mode B, cool graphite. The guide already existed for client work, so the job was making a personal site wear it without losing what a blog needs.
+I moved the blog onto a brand guide today, cool graphite with a graphite ground. The guide already existed for client work, so the job was making a personal site wear it without losing what a blog needs.
 
 The light theme is the guide applied directly. A graphite ground at `#F5F6F7`, white surfaces, `#C6CBD1` hairlines, petrol `#093558` headings, Indigo Action `#3548A8` for links, and red held in reserve. Nothing glows and nothing gradients.
 

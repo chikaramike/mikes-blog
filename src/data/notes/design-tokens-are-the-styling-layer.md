@@ -19,7 +19,7 @@ The pattern that holds up is three layers with a strict direction of travel.
 
 The bottom layer is the raw palette. Petrol is `#093558`, mist is `#DCE5F5`, graphite runs from `#0B0C0F` to `#F5F6F7`. These are facts about the brand and they almost never change.
 
-The middle layer is semantic. `--ck-ground` points at a graphite step. `--ck-heading` points at petrol. `--ck-link` points at the action indigo. This is where the site's intent lives.
+The middle layer is semantic. `--ground` points at a graphite step. `--heading` points at petrol. `--link` points at the action indigo. This is where the site's intent lives.
 
 The top layer is usage. Components and utilities read the semantic names. Nothing above layer two is allowed to contain a raw value.
 
@@ -35,7 +35,7 @@ That is what a dark mode should be. Same token names, different values, one clas
 
 The version of this site's stylesheet runs Tailwind v4, where configuration is CSS and the `@theme` block turns tokens into utilities. `--color-link` becomes `text-link`. `--color-hairline` becomes `border-hairline`. The design system and the utility names are the same object, which removes the usual mapping file nobody updates.
 
-There is a second trick worth keeping. Tailwind ships palettes named `gray`, `slate`, `blue`, `indigo`. Re-pointing those names at brand ramps inside `@theme` changes every existing utility at once. The lightest step stays lightest, the darkest stays darkest, so `text-gray-900` and its `dark:bg-slate-800` neighbour both keep their meaning while wearing brand colour. That is how I moved forty components onto a new palette in one afternoon without opening forty files. See [the theme log](../log/repainting-the-site-in-chikara-co.md) for how it went.
+There is a second trick worth keeping. Tailwind ships palettes named `gray`, `slate`, `blue`, `indigo`. Re-pointing those names at brand ramps inside `@theme` changes every existing utility at once. The lightest step stays lightest, the darkest stays darkest, so `text-gray-900` and its `dark:bg-slate-800` neighbour both keep their meaning while wearing brand colour. That is how I moved forty components onto a new palette in one afternoon without opening forty files.
 
 Use that trick deliberately. Re-pointing a stock palette is a migration tool, and the semantic names are where the design should end up living.
 

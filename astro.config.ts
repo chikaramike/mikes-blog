@@ -30,6 +30,13 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
+  // The Chikara.Co log entry was renamed to a brand-neutral title and slug.
+  // Keep the old URL alive so anything that already fetched the feed still
+  // lands on the piece.
+  redirects: {
+    '/log/repainting-the-site-in-chikara-co': '/log/repainting-the-site-in-a-brand-palette',
+  },
+
   // Prefetch links as they enter the viewport for snappier navigations
   // (works together with <ClientRouter />, which enables prefetch by default).
   prefetch: {
