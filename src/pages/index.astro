@@ -23,28 +23,24 @@ const collections = [
     href: '/log',
     label: 'Log',
     icon: 'tabler:history',
-    chipClass: 'bg-blue-500/10 text-blue-500 dark:bg-blue-400/15 dark:text-blue-300',
     description: 'Short observations, decisions, and working signals.',
   },
   {
     href: '/notes',
     label: 'Notes',
     icon: 'tabler:notebook',
-    chipClass: 'bg-indigo-500/10 text-indigo-500 dark:bg-indigo-400/15 dark:text-indigo-300',
     description: 'Ideas I am developing, testing, and returning to.',
   },
   {
     href: '/articles',
     label: 'Articles',
     icon: 'tabler:article',
-    chipClass: 'bg-violet-500/10 text-violet-500 dark:bg-violet-400/15 dark:text-violet-300',
     description: 'Longer arguments built from the work underneath.',
   },
   {
     href: '/maps',
     label: 'Maps',
     icon: 'tabler:map-2',
-    chipClass: 'bg-slate-500/10 text-slate-500 dark:bg-slate-400/15 dark:text-slate-300',
     description: 'Indexes that connect related ideas and paths.',
   },
 ];
@@ -66,18 +62,6 @@ const collections = [
     <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
       This is where I keep the thoughts, notes, arguments, and connections that are still becoming clear.
     </p>
-    <div class="mt-12 flex flex-wrap gap-4">
-      {
-        collections.map((collection) => (
-          <a
-            class="rounded border border-current px-5 py-3 font-semibold transition hover:bg-primary hover:text-white"
-            href={collection.href}
-          >
-            {collection.label}
-          </a>
-        ))
-      }
-    </div>
   </section>
 
   <section class="border-y border-slate-200 dark:border-slate-700">
@@ -85,7 +69,7 @@ const collections = [
       {
         collections.map((collection) => (
           <a class="bg-page p-6 transition hover:bg-slate-50 dark:hover:bg-slate-900" href={collection.href}>
-            <span class={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${collection.chipClass}`}>
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-mist text-petrol dark:bg-sky/15 dark:text-sky">
               <Icon name={collection.icon} class="h-6 w-6" aria-hidden="true" />
             </span>
             <h2 class="mt-4 text-xl font-bold font-heading">{collection.label}</h2>
