@@ -37,18 +37,41 @@ export default defineConfig({
     defaultStrategy: 'viewport',
   },
 
-  // Native Fonts API: self-hosts + subsets + preloads Inter and generates
-  // metric-adjusted fallbacks. Injected via <Font /> in Layout.astro and
-  // consumed through the `--font-inter` CSS variable in CustomStyles.astro.
+  // Native Fonts API: self-hosts + subsets + preloads and generates
+  // metric-adjusted fallbacks. Injected via <Font /> in Layout.astro and read
+  // through `--ck-font-display` / `--ck-font-body` in CustomStyles.astro.
+  //
+  // Chikara brand pair (see _PROJECTS/brand/brand-guide-chikara-co.md):
+  // display = M PLUS Rounded 1c 800, body = Noto Sans JP with Noto Sans for
+  // Latin. Noto Sans JP is loaded without `preload` and only at 400: the site's
+  // copy is English, so its Japanese unicode-range chunks are never fetched.
   fonts: [
     {
       provider: fontProviders.fontsource(),
-      name: 'Inter',
-      cssVariable: '--font-inter',
-      weights: ['100 900'],
+      name: 'M PLUS Rounded 1c',
+      cssVariable: '--font-display',
+      weights: ['800'],
       styles: ['normal'],
       subsets: ['latin'],
       fallbacks: ['sans-serif'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Noto Sans',
+      cssVariable: '--font-body',
+      weights: ['400', '500', '700'],
+      styles: ['normal'],
+      subsets: ['latin'],
+      fallbacks: ['sans-serif'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Noto Sans JP',
+      cssVariable: '--font-body-jp',
+      weights: ['400'],
+      styles: ['normal'],
+      subsets: ['japanese'],
+      fallbacks: [],
     },
   ],
 
@@ -129,7 +152,9 @@ export default defineConfig({
     }),
     shikiConfig: {
       // Code blocks follow the site theme; see the `.astro-code` rules in tailwind.css.
-      themes: { light: 'github-light', dark: 'github-dark' },
+      // The high-contrast dark palette keeps comments legible on the #0B0C0F
+      // ground; plain github-dark tops out at 3.05:1 for comment text.
+      themes: { light: 'github-light', dark: 'github-dark-high-contrast' },
     },
   },
 

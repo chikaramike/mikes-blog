@@ -1,48 +1,141 @@
 ---
-// Font family is provided by Astro's native Fonts API (see `fonts` in
-// astro.config.ts and <Font /> in Layout.astro), exposed as `--font-inter`.
-// To switch typefaces, change the `fonts` entry and repoint `--aw-font-*` below.
+// Chikara theme layer, mode B "cool graphite".
+//
+// Values mirror the brand guide in the chikara-workspace repo:
+//   _PROJECTS/brand/tokens/tokens.css      (--ck-* tokens, both modes)
+//   _PROJECTS/brand/tokens/core.tokens.json (shared core)
+//   _PROJECTS/brand/brand-guide-chikara-co.md
+//
+// The brand guide defines a light mode only. The `.dark` block below is the
+// agreed extension: graphite night ground (#0B0C0F), #14161A panels, Pale Mist
+// headings, Sky links. Same ramps, inverted ends.
+//
+// Everything else in the site reads the `--aw-*` aliases at the bottom, so a
+// token change here moves the whole site. Reverting the theme is a git
+// checkout of this file plus astro.config.ts and tailwind.css.
 ---
 
 <style is:inline>
   :root {
-    --aw-font-sans: var(--font-inter);
-    --aw-font-serif: var(--font-inter);
-    --aw-font-heading: var(--font-inter);
+    /* core: red */
+    --ck-red: #cc0000;
+    --ck-red-shade: #a30000;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* core: blue */
+    --ck-petrol: #093558;
+    --ck-royal: #2a3f89;
+    --ck-action: #3548a8;
+    --ck-sky: #7d9ad4;
+    --ck-mist: #dce5f5;
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    /* core: ink */
+    --ck-sumi: #12141c;
 
-    --aw-color-bg-page-dark: rgb(8 9 10);
+    /* scale: cool graphite */
+    --ck-graphite-0: #0b0c0f;
+    --ck-graphite-1: #14161a;
+    --ck-graphite-2: #1f2226;
+    --ck-graphite-3: #2c3036;
+    --ck-graphite-4: #3f444b;
+    --ck-graphite-5: #5c636c;
+    --ck-graphite-6: #7c838c;
+    --ck-graphite-7: #a2a9b1;
+    --ck-graphite-8: #c6cbd1;
+    --ck-graphite-9: #e3e6e9;
+    --ck-graphite-10: #f5f6f7;
+
+    /* type */
+    --ck-font-display:
+      var(--font-display), 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', ui-sans-serif, system-ui, sans-serif;
+    --ck-font-body:
+      var(--font-body), 'Noto Sans JP', 'Noto Sans', 'Hiragino Kaku Gothic ProN', ui-sans-serif, system-ui, sans-serif;
+    --ck-display-weight: 800;
+
+    /* radius, space, elevation */
+    --ck-radius-sm: 4px;
+    --ck-radius-md: 8px;
+    --ck-radius-lg: 16px;
+    --ck-radius-pill: 999px;
+    --ck-shadow-sm: 0 1px 2px rgba(18, 20, 28, 0.06);
+    --ck-shadow-md: 0 4px 16px rgba(18, 20, 28, 0.08);
+    --ck-shadow-lg: 0 16px 48px rgba(20, 26, 63, 0.14);
+
+    /* surfaces: light, mode B */
+    --ck-ground: var(--ck-graphite-10);
+    --ck-ground-alt: var(--ck-graphite-9);
+    --ck-surface: #ffffff;
+    --ck-surface-ink: var(--ck-graphite-1);
+    --ck-text: var(--ck-graphite-4);
+    --ck-text-muted: var(--ck-graphite-5);
+    --ck-heading: var(--ck-petrol);
+    --ck-link: var(--ck-action);
+    --ck-link-hover: var(--ck-royal);
+    --ck-accent: var(--ck-red);
+    --ck-accent-pressed: var(--ck-red-shade);
+    --ck-on-accent: #ffffff;
+    --ck-border: var(--ck-graphite-8);
+    --ck-border-soft: var(--ck-graphite-9);
+    --ck-ring: var(--ck-action);
+    --ck-selection: var(--ck-mist);
+    --ck-selection-text: var(--ck-sumi);
+
+    /* text on a dark panel that is dark in both modes (ink panels, code) */
+    --ck-text-on-ink: var(--ck-graphite-9);
+    --ck-text-on-ink-muted: var(--ck-graphite-7);
 
     ::selection {
-      background-color: lavender;
+      background-color: var(--ck-selection);
+      color: var(--ck-selection-text);
     }
   }
 
+  /* mode B, dark: graphite night */
   .dark {
-    --aw-font-sans: var(--font-inter);
-    --aw-font-serif: var(--font-inter);
-    --aw-font-heading: var(--font-inter);
-
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
-
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(8 9 10);
+    --ck-ground: var(--ck-graphite-0);
+    --ck-ground-alt: var(--ck-graphite-1);
+    --ck-surface: var(--ck-graphite-1);
+    --ck-surface-ink: var(--ck-graphite-0);
+    --ck-text: var(--ck-graphite-8);
+    --ck-text-muted: var(--ck-graphite-7);
+    --ck-heading: var(--ck-mist);
+    --ck-link: var(--ck-sky);
+    --ck-link-hover: var(--ck-mist);
+    --ck-accent: var(--ck-red);
+    --ck-accent-pressed: var(--ck-red-shade);
+    --ck-on-accent: #ffffff;
+    --ck-border: var(--ck-graphite-3);
+    --ck-border-soft: var(--ck-graphite-2);
+    --ck-ring: var(--ck-sky);
+    --ck-selection: var(--ck-petrol);
+    --ck-selection-text: var(--ck-mist);
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: var(--ck-selection);
+      color: var(--ck-selection-text);
     }
+  }
+
+  /* AstroWind aliases: the rest of the template reads only these. */
+  :root {
+    --aw-font-sans: var(--ck-font-body);
+    --aw-font-serif: var(--ck-font-body);
+    --aw-font-heading: var(--ck-font-display);
+
+    --aw-color-primary: var(--ck-link);
+    --aw-color-secondary: var(--ck-link-hover);
+    --aw-color-accent: var(--ck-accent);
+    --aw-color-on-accent: var(--ck-on-accent);
+
+    --aw-color-text-heading: var(--ck-heading);
+    --aw-color-text-default: var(--ck-text);
+    --aw-color-text-muted: var(--ck-text-muted);
+    --aw-color-link: var(--ck-link);
+
+    --aw-color-bg-page: var(--ck-ground);
+    --aw-color-bg-page-alt: var(--ck-ground-alt);
+    --aw-color-bg-surface: var(--ck-surface);
+    --aw-color-bg-page-dark: var(--ck-graphite-0);
+    --aw-color-border: var(--ck-border);
+    --aw-color-ring: var(--ck-ring);
   }
 </style>

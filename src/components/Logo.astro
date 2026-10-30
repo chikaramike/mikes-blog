@@ -4,8 +4,12 @@ import { SITE } from 'astrowind:config';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-extrabold font-heading tracking-tight text-heading whitespace-nowrap dark:text-heading"
 >
-  <Icon name="tabler:wave-sine" class="mr-1 inline-block h-6 w-6 align-[-0.2em] text-primary" aria-hidden="true" />
+  <Icon
+    name="tabler:wave-sine"
+    class="mr-1 inline-block h-6 w-6 align-[-0.2em] icon-bold text-petrol dark:text-sky"
+    aria-hidden="true"
+  />
   {SITE?.name}
 </span>

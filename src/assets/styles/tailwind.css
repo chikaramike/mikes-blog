@@ -10,6 +10,12 @@
 @custom-variant intersect (&:not([no-intersect]));
 
 @theme {
+  /* --- Chikara theme, mode B "cool graphite" --------------------------------
+     Tokens are declared in src/components/CustomStyles.astro (--ck-*).
+     Semantic names first, then the stock Tailwind palettes are re-pointed at
+     the brand ramps so every existing `text-gray-*` / `bg-blue-*` utility in
+     the template lands on a brand colour without touching 40 components. */
+
   --color-primary: var(--aw-color-primary);
   --color-secondary: var(--aw-color-secondary);
   --color-accent: var(--aw-color-accent);
@@ -18,11 +24,43 @@
   --color-muted: var(--aw-color-text-muted);
   --color-link: var(--aw-color-link, var(--aw-color-primary));
 
+  --color-surface: var(--aw-color-bg-surface);
+  --color-ground: var(--aw-color-bg-page);
+  --color-ground-alt: var(--aw-color-bg-page-alt);
+  --color-hairline: var(--aw-color-border);
+
+  /* core palette, available as bg-petrol, text-sky, border-mist, … */
+  --color-petrol: #093558;
+  --color-royal: #2a3f89;
+  --color-action: #3548a8;
+  --color-sky: #7d9ad4;
+  --color-mist: #dce5f5;
+  --color-chikara-red: #cc0000;
+  --color-chikara-red-shade: #a30000;
+  --color-sumi: #12141c;
+
+  /* graphite ramp */
+  --color-graphite-0: #0b0c0f;
+  --color-graphite-1: #14161a;
+  --color-graphite-2: #1f2226;
+  --color-graphite-3: #2c3036;
+  --color-graphite-4: #3f444b;
+  --color-graphite-5: #5c636c;
+  --color-graphite-6: #7c838c;
+  --color-graphite-7: #a2a9b1;
+  --color-graphite-8: #c6cbd1;
+  --color-graphite-9: #e3e6e9;
+  --color-graphite-10: #f5f6f7;
+
   --font-sans:
-    var(--aw-font-sans, ui-sans-serif), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
-  --font-serif: var(--aw-font-serif, ui-serif), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  --font-heading: var(--aw-font-heading, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+    var(--ck-font-body), 'Noto Sans JP', 'Noto Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif: var(--ck-font-body), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-heading: var(--ck-font-display), 'M PLUS Rounded 1c', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-brand-sm: var(--ck-radius-sm);
+  --radius-brand: var(--ck-radius-md);
+  --radius-brand-lg: var(--ck-radius-lg);
 
   --animate-fade: fadeInUp 0.5s both;
 
@@ -38,8 +76,105 @@
   }
 }
 
+/* Neighbouring Tailwind palettes re-pointed at the brand ramps.
+   Direction is preserved (50 = lightest, 950 = darkest), so both a
+   `text-gray-900` and its `dark:bg-gray-800` counterpart stay correct. */
+@theme {
+  --color-gray-50: #f5f6f7;
+  --color-gray-100: #e3e6e9;
+  --color-gray-200: #c6cbd1;
+  --color-gray-300: #a2a9b1;
+  --color-gray-400: #7c838c;
+  --color-gray-500: #5c636c;
+  --color-gray-600: #3f444b;
+  --color-gray-700: #2c3036;
+  --color-gray-800: #1f2226;
+  --color-gray-900: #14161a;
+  --color-gray-950: #0b0c0f;
+
+  --color-slate-50: #f5f6f7;
+  --color-slate-100: #e3e6e9;
+  --color-slate-200: #c6cbd1;
+  --color-slate-300: #a2a9b1;
+  --color-slate-400: #7c838c;
+  --color-slate-500: #5c636c;
+  --color-slate-600: #3f444b;
+  --color-slate-700: #2c3036;
+  --color-slate-800: #1f2226;
+  --color-slate-900: #14161a;
+  --color-slate-950: #0b0c0f;
+
+  --color-zinc-50: #f5f6f7;
+  --color-zinc-100: #e3e6e9;
+  --color-zinc-200: #c6cbd1;
+  --color-zinc-300: #a2a9b1;
+  --color-zinc-400: #7c838c;
+  --color-zinc-500: #5c636c;
+  --color-zinc-600: #3f444b;
+  --color-zinc-700: #2c3036;
+  --color-zinc-800: #1f2226;
+  --color-zinc-900: #14161a;
+  --color-zinc-950: #0b0c0f;
+
+  /* blue = Indigo Action family: links, buttons, active nav */
+  --color-blue-50: #dce5f5;
+  --color-blue-100: #dce5f5;
+  --color-blue-200: #7d9ad4;
+  --color-blue-300: #7d9ad4;
+  --color-blue-400: #3548a8;
+  --color-blue-500: #3548a8;
+  --color-blue-600: #2a3f89;
+  --color-blue-700: #2a3f89;
+  --color-blue-800: #093558;
+  --color-blue-900: #093558;
+  --color-blue-950: #093558;
+
+  /* indigo = Petrol family: headings, structural emphasis */
+  --color-indigo-50: #dce5f5;
+  --color-indigo-100: #dce5f5;
+  --color-indigo-200: #7d9ad4;
+  --color-indigo-300: #7d9ad4;
+  --color-indigo-400: #2a3f89;
+  --color-indigo-500: #093558;
+  --color-indigo-600: #093558;
+  --color-indigo-700: #093558;
+  --color-indigo-800: #093558;
+  --color-indigo-900: #093558;
+  --color-indigo-950: #093558;
+
+  /* violet = Sky family: graphics only, never body text on white */
+  --color-violet-50: #dce5f5;
+  --color-violet-100: #dce5f5;
+  --color-violet-200: #7d9ad4;
+  --color-violet-300: #7d9ad4;
+  --color-violet-400: #7d9ad4;
+  --color-violet-500: #2a3f89;
+  --color-violet-600: #2a3f89;
+  --color-violet-700: #093558;
+  --color-violet-800: #093558;
+  --color-violet-900: #093558;
+  --color-violet-950: #093558;
+}
+
 @utility bg-page {
   background-color: var(--aw-color-bg-page);
+}
+
+/* Headings carry the petrol ink of the brand by default; anything that needs a
+   different colour (headings on ink panels, inverted heroes) sets it with a
+   utility class, which wins over this element selector. */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--aw-color-text-heading);
+    font-family: var(--aw-font-heading);
+    font-weight: var(--ck-display-weight);
+    letter-spacing: -0.01em;
+  }
 }
 
 @utility bg-dark {
@@ -54,12 +189,32 @@
   color: var(--aw-color-text-muted);
 }
 
+/* Buttons. Brand guide: the filled button is Chikara Red, 8px radius,
+   weight 700. Red is the only element allowed at that volume, so anything
+   that is not the page's primary action uses the outline `.btn`. */
 @utility btn {
-  @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+  @apply inline-flex items-center justify-center font-medium text-center text-base leading-snug transition py-3 px-6 cursor-pointer;
+  border-radius: var(--ck-radius-md);
+  border: 1px solid var(--aw-color-border);
+  background-color: transparent;
+  color: var(--aw-color-text-default);
+  box-shadow: none;
+  &:hover {
+    background-color: var(--aw-color-bg-page-alt);
+    border-color: var(--ck-text-muted);
+  }
 }
 
 @utility btn-primary {
-  @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+  @apply btn font-bold;
+  background-color: var(--ck-accent);
+  border-color: var(--ck-accent);
+  color: var(--ck-on-accent);
+  &:hover {
+    background-color: var(--ck-accent-pressed);
+    border-color: var(--ck-accent-pressed);
+    color: var(--ck-on-accent);
+  }
 }
 
 @utility btn-secondary {
@@ -67,13 +222,21 @@
 }
 
 @utility btn-tertiary {
-  @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+  @apply btn text-muted bg-transparent;
+  border-color: transparent;
+  &:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--aw-color-text-heading);
+  }
 }
 
-/* Sticky header: solid page background on phones, translucent page background with blur on desktop. */
+/* Sticky header: solid page background on phones, translucent page background
+   with blur on desktop, brand hairline + soft graphite shadow once scrolled. */
 #header.scroll > div:first-child {
   @apply bg-page lg:backdrop-blur-md;
-  box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
+  box-shadow: var(--ck-shadow-md);
+  border-bottom: 1px solid var(--ck-border);
 }
 @media (width >= 64rem) {
   #header.scroll > div:first-child {
@@ -130,6 +293,46 @@
   margin-top: 0;
 }
 
+/* Prose: brand colours for article bodies. The template applies
+   `prose dark:prose-invert`, so both variable sets are needed. */
+.prose {
+  --tw-prose-body: var(--ck-text);
+  --tw-prose-headings: var(--ck-heading);
+  --tw-prose-lead: var(--ck-text-muted);
+  --tw-prose-links: var(--ck-link);
+  --tw-prose-bold: var(--ck-heading);
+  --tw-prose-counters: var(--ck-link);
+  --tw-prose-bullets: var(--ck-action);
+  --tw-prose-hr: var(--ck-border);
+  --tw-prose-quotes: var(--ck-heading);
+  --tw-prose-quote-borders: var(--ck-border);
+  --tw-prose-captions: var(--ck-text-muted);
+  --tw-prose-code: var(--ck-heading);
+  --tw-prose-pre-code: var(--ck-text-on-ink);
+  --tw-prose-pre-bg: var(--ck-surface-ink);
+  --tw-prose-th-borders: var(--ck-border);
+  --tw-prose-td-borders: var(--ck-border-soft);
+}
+
+.dark .prose {
+  --tw-prose-invert-body: var(--ck-text);
+  --tw-prose-invert-headings: var(--ck-heading);
+  --tw-prose-invert-lead: var(--ck-text-muted);
+  --tw-prose-invert-links: var(--ck-link);
+  --tw-prose-invert-bold: var(--ck-heading);
+  --tw-prose-invert-counters: var(--ck-link);
+  --tw-prose-invert-bullets: var(--ck-sky);
+  --tw-prose-invert-hr: var(--ck-border);
+  --tw-prose-invert-quotes: var(--ck-heading);
+  --tw-prose-invert-quote-borders: var(--ck-border);
+  --tw-prose-invert-captions: var(--ck-text-muted);
+  --tw-prose-invert-code: var(--ck-heading);
+  --tw-prose-invert-pre-code: var(--ck-text-on-ink);
+  --tw-prose-invert-pre-bg: var(--ck-surface-ink);
+  --tw-prose-invert-th-borders: var(--ck-border);
+  --tw-prose-invert-td-borders: var(--ck-border-soft);
+}
+
 /* Blog prose: inline code without the typography plugin's backticks, and
    code blocks that follow the light/dark theme (Shiki dual themes). */
 .prose :where(code):not(:where(pre *)) {
@@ -144,6 +347,7 @@
 }
 .prose :where(pre.astro-code) {
   border: 1px solid color-mix(in oklab, var(--aw-color-text-default) 12%, transparent);
+  border-radius: var(--ck-radius-md);
 }
 .dark .astro-code,
 .dark .astro-code span {
