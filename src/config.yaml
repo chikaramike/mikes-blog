@@ -13,8 +13,11 @@ metadata:
     template: '%s — mikes.blog'
   description: 'A personal digital garden about leadership, technology, operations, and useful change.'
   robots:
-    index: true
-    follow: true
+    # Kept out of search results until mikes.blog is pointed at the worker.
+    # Canonical URLs already say https://mikes.blog, which does not resolve yet,
+    # so indexing the workers.dev host now would bake in the wrong URLs.
+    index: false
+    follow: false
   openGraph:
     site_name: mikes.blog
     images:
