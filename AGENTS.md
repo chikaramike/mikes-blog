@@ -127,3 +127,6 @@ After changes, always verify:
 2. `npm run check` passes (astro check + ESLint + Prettier)
 3. Visual check in browser: homepage, blog, dark mode, mobile menu
 4. Structured data describes the site it is on: the `WebSite` / `Organization` block in `src/pages/index.astro` is built only from `config.yaml`; anything you add there must be true for your site
+
+## Voice
+Mike's writing voice is defined in `voice.md` (repo root). Read it before drafting or editing any prose for him, apply the matching mode, and ask for mode and personality level if not given. Canonical copy: `shakti-workspace/_AREAS/writing/voice.md`; update it there and re-copy.
