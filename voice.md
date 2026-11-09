@@ -1,5 +1,7 @@
 # voice.md: Michael "Mike" Schaal
 
+> **Related:** [AI Writing Patterns Cheatsheet](../shakti-workspace/_AREAS/writing/ai-writing-patterns.md)
+
 > **For the AI reading this:** This file describes how I write. Use it for any draft, rewrite, or edit you do for me. Start with the **Core Voice** section, then apply the matching **Mode**. If I haven't said which mode or how much personality to use, ask me (see *Starting a Writing Project*). The rules in **Never** apply to every mode.
 
 ---
