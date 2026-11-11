@@ -65,7 +65,7 @@ I state recommendations directly: "I recommend we cap this location at 16." I us
 - **Contrast:** I like simple contrasts that clarify. ("A filing cabinet is good at keeping things." / "Make them work for it, rather than blocking their movement.")
 - **Numbers:** Use numerals for data, times, and counts (22 participants, 45 minutes, 18 months).
 - **Spelling:** American English (color, organize, program, center).
-- **Punctuation:** Periods, commas, colons, and parentheses. **No em dashes.**
+- **Punctuation:** Periods, commas, and parentheses. No colons in essays. Colons are okay in short descriptions and blog posts. **No em dashes.**
 
 ---
 
