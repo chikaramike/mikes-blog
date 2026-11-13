@@ -13,4 +13,4 @@ ESLint checks code against the project's rules. The repository includes Astro an
 
 [Prettier](/tools/prettier) handles consistent formatting. ESLint supplies a separate code-checking step before the [Astro](/tools/astro) production build.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

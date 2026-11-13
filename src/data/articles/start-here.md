@@ -8,7 +8,7 @@ sources:
   - ../articles/why-a-digital-garden
   - ../notes/what-is-a-note
   - ../articles/how-i-built-this-site
-  - ../maps/astro-site-building
+  - ../maps/site-building
 ---
 
 I keep unfinished ideas here alongside longer articles. Some begin as a small observation. Others grow through reading, testing, and revision. The links between them help me see what connects.
@@ -22,7 +22,7 @@ My interests are leadership, technology, operations, and the work of making chan
 1. **[Why I am building a digital garden](./why-a-digital-garden.md)** explains why I want a place for developing ideas and how the different kinds of writing fit together. Start here if the format is new to you.
 2. **[What a note is for](../notes/what-is-a-note.md)** is a short example of the thinking I want to keep. It also explains the seedling, budding, and evergreen labels you will see on notes.
 3. **[How I built this site](./how-i-built-this-site.md)** walks through the technology and publishing process. Read this if you want to see how the idea became a working website.
-4. **[Building this Astro site](../maps/astro-site-building.md)** follows one subject from a log entry to a note and an article. It shows how to use the connections rather than treating each page as a separate read.
+4. **[Building this site](../maps/site-building.md)** follows one subject from a log entry to a note and an article. It shows how to use the connections rather than treating each page as a separate read.
 
 ## Finding your next read
 

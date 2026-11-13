@@ -13,4 +13,4 @@ I use npm to install the packages listed in `package.json` and run the project's
 
 GitHub Actions uses `npm ci` to install dependencies from the lockfile before checking and building. Publishing remains a separate step through [Wrangler](/tools/wrangler).
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

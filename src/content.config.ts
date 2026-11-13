@@ -107,6 +107,7 @@ const mapCollection = defineCollection({
   loader: glob({ pattern: ['*.md', '*.mdx'], base: 'src/data/maps' }),
   schema: gardenDocumentDefinition().extend({
     description: z.string().optional(),
+    metadata: metadataDefinition(),
     links: z.array(z.string()).optional(),
   }),
 });

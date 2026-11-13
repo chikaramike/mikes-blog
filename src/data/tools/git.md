@@ -13,4 +13,4 @@ Git records changes to this site's source files and Markdown. A commit gives a c
 
 [GitHub](/tools/github) hosts the shared repository. Git handles version history, while [Wrangler](/tools/wrangler) publishes the built site. A pushed commit alone does not deploy this project.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

@@ -34,6 +34,7 @@ export default defineConfig({
   // Keep the old URL alive so anything that already fetched the feed still
   // lands on the piece.
   redirects: {
+    '/maps/astro-site-building': '/maps/site-building',
     '/log/repainting-the-site-in-chikara-co': '/log/repainting-the-site-in-a-brand-palette',
   },
 

@@ -13,4 +13,4 @@ I use the project's local Prettier installation for Markdown and site code. The 
 
 [Configuring workspace Prettier](../log/configuring-workspace-prettier.md) records the editor change. [Workspace Prettier and Astro plugin resolution](../notes/workspace-prettier-and-astro-plugin-resolution.md) explains why using the project formatter matters.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

@@ -13,4 +13,4 @@ Node.js runs JavaScript outside the browser. In this project it runs the develop
 
 The site is built as static files. Node.js is needed for that build workflow, while [Cloudflare](/tools/cloudflare) serves the finished output. [npm](/tools/npm) manages the project packages and scripts.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

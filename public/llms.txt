@@ -1,0 +1,30 @@
+# mikes.blog
+
+> Mike's personal web log about leadership, technology, operations, and useful change. Ideas develop through linked logs, notes, articles, and maps.
+
+This site is in pre-publication review. Its current pages are marked noindex. This file is a navigation guide to content already available on the site, and does not change access permissions or authorize indexing, reuse, or model training. Drafts and unreleased writing are not listed here.
+
+Links are relative to the serving site's root so they continue to work when the site moves to its own domain. These links currently lead to HTML pages. Separate Markdown versions are not provided.
+
+Notes may be seedlings, budding ideas, or evergreen references. Read the page's stage and dates before treating it as a settled position. Tools describe their role in this particular site, rather than universal recommendations.
+
+## Start here
+
+- [Start here](/articles/start-here/): A short introduction and a curated first reading path.
+- [Why I am building a digital garden](/articles/why-a-digital-garden/): The purpose of the site and its different kinds of writing.
+- [What a note is for](/notes/what-is-a-note/): How developing notes and their stage labels work.
+
+## Building the site
+
+- [Building this site](/maps/site-building/): The connected map of decisions, tools, and writing. The current stack uses Astro and Cloudflare Workers.
+- [How I built this site](/articles/how-i-built-this-site/): The implementation, content model, and publishing workflow.
+- [Building an Astro site as a small system](/articles/building-an-astro-site-as-a-small-system/): The reasoning behind the original Astro implementation.
+
+## Browse
+
+- [Log](/log/): Short observations and decisions.
+- [Notes](/notes/): Individual ideas in development.
+- [Articles](/articles/): Longer explanations and arguments.
+- [Maps](/maps/): Reading paths connecting related material.
+- [Tools](/tools/): Tools used in the work, with official websites and related reading.
+- [RSS feed](/rss.xml): Entries from the log, notes, articles, and maps. Absolute feed URLs currently use the configured canonical domain, which may differ from the pre-publication host.

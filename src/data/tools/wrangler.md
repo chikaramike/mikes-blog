@@ -13,4 +13,4 @@ Wrangler publishes the built site to [Cloudflare](/tools/cloudflare). The projec
 
 The publishing step is `npx wrangler deploy`, after checks and a successful build. [How I built this site](../articles/how-i-built-this-site.md) describes how the source files become a live site.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

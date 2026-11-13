@@ -13,4 +13,4 @@ I started this site with AstroWind. It supplied layouts, navigation, metadata co
 
 The template is the starting point. [Astro](/tools/astro) builds the pages, and [Tailwind CSS](/tools/tailwind-css) supplies the styling utilities. [How I built this site](../articles/how-i-built-this-site.md) records the changes that made the template fit.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.

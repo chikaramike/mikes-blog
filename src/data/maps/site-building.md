@@ -1,15 +1,21 @@
 ---
-title: 'Building this Astro site'
+title: 'Building this site'
+metadata:
+  title: 'Building mikes.blog | Site-building notes and tools'
+  ignoreTitleTemplate: true
 publishDate: 2026-09-21T00:00:00Z
-description: 'A connected path through the first log, note, article, and map about building mikes.blog with Astro.'
+description: 'The decisions, tools, and writing behind mikes.blog, currently built with Astro and published through Cloudflare Workers.'
 tags:
+  - site-building
   - astro
 links:
   - /log/starting-an-astro-site
   - /notes/astro-site-as-a-system
   - /articles/building-an-astro-site-as-a-small-system
-  - /maps/astro-site-building
+  - /maps/site-building
 ---
+
+This map connects the decisions, tools, and writing behind mikes.blog, currently built with Astro and published through Cloudflare Workers. It will grow with the site as the tools and approach change.
 
 This map follows one idea through all four garden forms:
 

@@ -13,4 +13,4 @@ This project uses TypeScript in its configuration and shared code. Type informat
 
 The project also defines schemas for its content collections. Those schemas validate frontmatter when Astro loads the writing. [Building an Astro site as a small system](../articles/building-an-astro-site-as-a-small-system.md) explains why that structure matters.
 
-Return to [Building this Astro site](../maps/astro-site-building.md) for the connected writing and tools.
+Return to [Building this site](../maps/site-building.md) for the connected writing and tools.
