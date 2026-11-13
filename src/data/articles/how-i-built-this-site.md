@@ -35,7 +35,7 @@ npm run check    # astro check + ESLint + Prettier
 
 I did not build the scaffolding by hand. I started from [AstroWind](https://github.com/arthelokyo/astrowind), a free, open-source template (MIT license) built on Astro v7 and Tailwind CSS v4.
 
-Templates get a bad name in some circles, as if starting from one means skipping the real work. On a site like this the real work is never the responsive grid or the SEO tags. A good template hands you that infrastructure — dark mode, RSS, sitemaps, image optimization, accessibility — so the hours go to the part that is actually yours: the content and its structure.
+Templates get a bad name in some circles, as if starting from one means skipping the real work. On a site like this the real work is never the responsive grid or the SEO tags. A good template hands you that infrastructure, such as dark mode, RSS, sitemaps, image optimization, and accessibility, so the hours go to the part that is actually yours: the content and its structure.
 
 ```bash
 npm create astro@latest -- --template arthelokyo/astrowind
@@ -79,7 +79,7 @@ The template ships looking like a product demo. A thin bar at the top announced 
 
 - Removed the announcement bar and the "Start here" button.
 - Rewrote the headline to "A web log for ideas in motion" and dropped the credential from the subtitle. The ideas should introduce themselves.
-- Gave the Log, Notes, Articles, and Maps cards neon icons in a Tokyo-midnight palette — cyan, pink, violet, lime. I live in Tokyo, and neon against dark is the mood I want the site to carry.
+- Gave the Log, Notes, Articles, and Maps cards neon icons in a Tokyo-midnight palette of cyan, pink, violet, and lime. I live in Tokyo, and neon against dark is the mood I want the site to carry.
 - Swapped the favicon from the template's logo to the same sine-wave icon used in the header.
 
 Most of these were single-file changes. That is the argument for a template: identity is a thin layer you paint over solid infrastructure, not something you rebuild from the ground up.

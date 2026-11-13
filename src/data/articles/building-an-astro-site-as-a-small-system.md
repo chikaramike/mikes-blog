@@ -1,9 +1,9 @@
 ---
 title: 'Building an Astro site as a small system'
 publishDate: 2026-09-21T00:00:00Z
-excerpt: 'A practical way to build an Astro site around content types, clear routes, and a publishing system that stays understandable.'
+excerpt: 'A practical way to build a personal site around content types, clear routes, and a publishing system that stays understandable.'
 image: '~/assets/images/default.png'
-imageAlt: 'Placeholder image for an Astro site article'
+imageAlt: 'Placeholder image for a site-building article'
 tags:
   - astro
 sources:
@@ -15,7 +15,7 @@ A new website often begins as a visual exercise. There is a homepage to design, 
 
 The more important question is what kind of work the site is meant to support.
 
-For mikes.blog, the answer is a digital garden: a place where small observations can become notes, notes can inform articles, and maps can help a reader see the relationships between them. Astro is a natural fit for that approach because it keeps the publishing model close to the filesystem and turns Markdown into fast, static pages without requiring a large runtime system.
+For mikes.blog, the answer is a digital garden: a place where small observations can become notes, notes can inform articles, and maps can help a reader see the relationships between them. That calls for a publishing model that stays close to the filesystem. Astro fits this implementation by turning Markdown into fast, static pages without requiring a large runtime system.
 
 ## Start with the content model
 
@@ -33,7 +33,7 @@ These distinctions prevent one of the common problems with personal sites: every
 
 Each collection has its own directory under `src/data`: `log/`, `notes/`, `articles/`, and `maps/`. The folder names are ordinary enough that a new contributor can understand them without reading a framework manual. The schemas in `src/content.config.ts` add the rules that the folders alone cannot express.
 
-This is one of Astro's strengths. Content can remain portable Markdown while the site still gets typed frontmatter, build-time validation, and rendered pages. The system does not need a database to be useful. Git provides history, the filesystem provides organization, and Astro provides the build pipeline.
+That setup is the site's foundation. Content can remain portable Markdown while the site still gets typed frontmatter, build-time validation, and rendered pages. The system does not need a database to be useful. Git provides history, the filesystem provides organization, and Astro currently provides the build pipeline.
 
 That simplicity is valuable for a personal site. I want to spend my time thinking and writing, not maintaining a publishing platform. When the site does need more capability, the content model gives me a stable place to add it. Search, related content, RSS, or a future editor can build on the collections instead of inventing a second structure beside them.
 

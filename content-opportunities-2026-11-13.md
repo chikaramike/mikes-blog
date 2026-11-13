@@ -112,4 +112,3 @@ Corrected in `shakti-workspace` on 2026-11-13 (Fri), commit alongside this docum
 - `_AREAS/tech/mac-window-management.md` opened with "Decision, 2026-11-08: outlines belong to JankyBorders (`borders`). Hammerspoon stays on the shelf." That decision never took effect. It now leads with `window-border`, keeps JankyBorders as the documented alternative that lost, and records the three unmerged branches and the README timer mismatch.
 - `backlog/tasks/task-0034` was retitled from the JankyBorders plan to the window-border work, moved to `In Progress`, and given acceptance criteria that describe the real open loop. Four of eight are already met.
 - `DECISIONS.md` carries a 2026-11-13 (Fri) entry withdrawing the 2026-11-08 tool choice and explaining why.
-
