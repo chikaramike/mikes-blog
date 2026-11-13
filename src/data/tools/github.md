@@ -6,6 +6,7 @@ description: The platform I use to version, review, and share the code and conte
 website: https://github.com/
 actionLabel: Explore GitHub
 tags:
+  - astro
   - web-development
   - collaboration
 ---

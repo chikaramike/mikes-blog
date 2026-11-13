@@ -6,6 +6,7 @@ description: The framework this site uses to ship fast, content-focused pages wi
 website: https://astro.build/
 actionLabel: Explore Astro
 tags:
+  - astro
   - web-development
 resources:
   - title: Astro documentation

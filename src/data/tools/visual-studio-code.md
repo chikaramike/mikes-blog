@@ -6,6 +6,7 @@ description: The editor I use to write, organize, and maintain the site alongsid
 website: https://code.visualstudio.com/
 actionLabel: Get Visual Studio Code
 tags:
+  - astro
   - web-development
   - garden
 ---

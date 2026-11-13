@@ -6,6 +6,7 @@ description: A platform for deploying sites and services with a global network, 
 website: https://www.cloudflare.com/
 actionLabel: Explore Cloudflare
 tags:
+  - astro
   - hosting
   - web-development
 ---

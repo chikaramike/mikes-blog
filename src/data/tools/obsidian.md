@@ -6,6 +6,7 @@ description: A flexible local Markdown workspace for developing ideas, notes, an
 website: https://obsidian.md/
 actionLabel: Explore Obsidian
 tags:
+  - astro
   - garden
   - knowledge-management
 ---

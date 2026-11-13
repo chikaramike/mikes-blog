@@ -19,3 +19,11 @@ This map follows one idea through all four garden forms:
 4. Return to this map when more related pieces are added.
 
 The loop is intentional. A map is not only a directory; it is a way to show how a thought changes as it moves through the garden.
+
+## How the tools fit together
+
+[AstroWind](/tools/astrowind) supplied the starting template. [Astro](/tools/astro) turns the content and components into pages, with [Tailwind CSS](/tools/tailwind-css) for styling, [Vite](/tools/vite) underneath the build, and [Sharp](/tools/sharp) for local image processing.
+
+[Node.js](/tools/node-js) runs the local tools. [npm](/tools/npm) installs the packages and runs the scripts. [TypeScript](/tools/typescript), [ESLint](/tools/eslint), and [Prettier](/tools/prettier) help keep the code and formatting consistent.
+
+[Visual Studio Code](/tools/visual-studio-code), [Foam](/tools/foam), and [Obsidian](/tools/obsidian) support the writing workflow. [Git](/tools/git) records changes, and [GitHub](/tools/github) hosts the repository and runs the checks. After a successful build, [Wrangler](/tools/wrangler) publishes the static files to [Cloudflare](/tools/cloudflare).

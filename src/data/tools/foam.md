@@ -6,6 +6,7 @@ description: A VS Code workspace for connected Markdown notes that keeps the gar
 website: https://foambubble.github.io/foam/
 actionLabel: Explore Foam
 tags:
+  - astro
   - garden
   - knowledge-management
 ---
