@@ -4,6 +4,7 @@ All notable changes to `mikes.blog` are recorded here.
 
 ## [Unreleased]
 
+- Added seven draft Mikes I/O Season 1 companion articles and a linked series map.
 - Begin rebuilding the site around original digital-garden content.
 - Added a connected log, note, article, and map about building this Astro site.
 - Archived the inherited page routes and replaced them with a personal homepage and simple garden routes.
