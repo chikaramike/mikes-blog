@@ -34,29 +34,29 @@ Most confusion comes from tools that bundle two or three layers under one name.
 
 ## Box 1: the labs' own apps
 
-| Tool | Models | You pay through |
-|---|---|---|
+| Tool                               | Models             | You pay through                    |
+| ---------------------------------- | ------------------ | ---------------------------------- |
 | Claude (chat, Cowork, Claude Code) | Claude models only | A Claude plan or the Anthropic API |
-| ChatGPT (chat, Codex) | OpenAI models only | A ChatGPT plan or the OpenAI API |
+| ChatGPT (chat, Codex)              | OpenAI models only | A ChatGPT plan or the OpenAI API   |
 
 These are the most polished. Each is built by the company that makes the model, so new features show up here first. The trade-off is that you get one company's models, and your limits come from one company's plan.
 
 ## Box 2: open harnesses that take any model
 
-| Tool | What it is good at | License |
-|---|---|---|
-| OpenCode | A coding agent in the terminal. Works with many providers, including its own low-cost OpenCode Go plan. | Open source (MIT) |
-| Pi | A small, extensible agent harness from Earendil. Easy to shape with extensions. | MIT |
-| Hermes Agent | An always-on assistant from Nous Research: memory, skills that improve, scheduled jobs, and messaging apps like Telegram as front doors. | MIT |
+| Tool         | What it is good at                                                                                                                       | License           |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| OpenCode     | A coding agent in the terminal. Works with many providers, including its own low-cost OpenCode Go plan.                                  | Open source (MIT) |
+| Pi           | A small, extensible agent harness from Earendil. Easy to shape with extensions.                                                          | MIT               |
+| Hermes Agent | An always-on assistant from Nous Research: memory, skills that improve, scheduled jobs, and messaging apps like Telegram as front doors. | MIT               |
 
 These bring the harness and let you choose the model. That is the reason to use them: you can run a cheap open model for routine work and switch to a frontier model for the hard step, inside the same tool.
 
 ## Box 3: tools that run other harnesses
 
-| Tool | What it does |
-|---|---|
+| Tool    | What it does                                                                                                                                              |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | T3 Code | A desktop, web, and mobile app that drives Claude Code, Codex, OpenCode, and others. It uses the logins you already have and brings no models of its own. |
-| herdr | A terminal multiplexer built for agents. It runs each agent in a pane and shows which one is working, blocked, or idle. |
+| herdr   | A terminal multiplexer built for agents. It runs each agent in a pane and shows which one is working, blocked, or idle.                                   |
 
 The question that sorts these out is: if I remove every agent behind it, does it still do anything with AI? For T3 Code and herdr the answer is no. They make several agents easier to run and watch. They are not agents themselves.
 

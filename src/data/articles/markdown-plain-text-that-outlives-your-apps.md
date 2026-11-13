@@ -27,6 +27,7 @@ A plain text file contains only the characters you typed. Any editor on any comp
 
 ```markdown
 # Heading 1
+
 ## Heading 2
 
 Plain paragraph. **Bold** and _italic_.

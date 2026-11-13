@@ -46,12 +46,12 @@ This works the same way on Linux and on web servers. Windows uses backslashes, b
 
 ## Four Finder shortcuts that make paths visible
 
-| Action | How |
-|---|---|
-| Show where you are | View > Show Path Bar |
-| Copy a file's full path | Select it, then Option + Command + C |
-| Jump to a path | Command + Shift + G, type the path, press Enter |
-| Show hidden files | Command + Shift + . (period) |
+| Action                  | How                                             |
+| ----------------------- | ----------------------------------------------- |
+| Show where you are      | View > Show Path Bar                            |
+| Copy a file's full path | Select it, then Option + Command + C            |
+| Jump to a path          | Command + Shift + G, type the path, press Enter |
+| Show hidden files       | Command + Shift + . (period)                    |
 
 Hidden files start with a dot, like `.zshrc`. They are mostly settings. Tools keep their configuration there so it does not get deleted by accident. Look, but do not delete anything yet.
 

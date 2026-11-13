@@ -1,194 +1,194 @@
 [
- {
-  "dark": false,
-  "url": "/",
-  "fails": [],
-  "count": 0,
-  "total": 70
- },
- {
-  "dark": false,
-  "url": "/log",
-  "fails": [],
-  "count": 0,
-  "total": 91
- },
- {
-  "dark": false,
-  "url": "/articles",
-  "fails": [],
-  "count": 0,
-  "total": 243
- },
- {
-  "dark": false,
-  "url": "/articles/how-i-built-this-site",
-  "fails": [],
-  "count": 0,
-  "total": 191
- },
- {
-  "dark": false,
-  "url": "/tools",
-  "fails": [],
-  "count": 0,
-  "total": 105
- },
- {
-  "dark": false,
-  "url": "/notes",
-  "fails": [],
-  "count": 0,
-  "total": 87
- },
- {
-  "dark": false,
-  "url": "/layout-components",
-  "fails": [
-   {
-    "t": "$",
-    "tag": "SPAN",
-    "r": 2.98,
-    "min": 4.5,
-    "fg": "rgb(92,99,108)",
-    "bg": "rgb(20,22,26)",
-    "size": 18,
-    "weight": 400
-   },
-   {
-    "t": "popular",
-    "tag": "SPAN",
-    "r": 1,
-    "min": 4.5,
-    "fg": "rgb(255,255,255)",
-    "bg": "rgb(255,255,255)",
-    "size": 10,
-    "weight": 700
-   }
-  ],
-  "count": 2,
-  "total": 333
- },
- {
-  "dark": true,
-  "url": "/",
-  "fails": [],
-  "count": 0,
-  "total": 70
- },
- {
-  "dark": true,
-  "url": "/log",
-  "fails": [],
-  "count": 0,
-  "total": 91
- },
- {
-  "dark": true,
-  "url": "/articles",
-  "fails": [
-   {
-    "t": "# local dev server at localhost:4321",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   },
-   {
-    "t": "# static output into dist/",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   },
-   {
-    "t": "# astro check + ESLint + Prettier",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   }
-  ],
-  "count": 3,
-  "total": 243
- },
- {
-  "dark": true,
-  "url": "/articles/how-i-built-this-site",
-  "fails": [
-   {
-    "t": "# local dev server at localhost:4321",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   },
-   {
-    "t": "# static output into dist/",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   },
-   {
-    "t": "# astro check + ESLint + Prettier",
-    "tag": "SPAN",
-    "r": 3.05,
-    "min": 4.5,
-    "fg": "rgb(106,115,125)",
-    "bg": "rgb(36,41,46)",
-    "size": 14.2222,
-    "weight": 400
-   }
-  ],
-  "count": 3,
-  "total": 191
- },
- {
-  "dark": true,
-  "url": "/tools",
-  "fails": [],
-  "count": 0,
-  "total": 105
- },
- {
-  "dark": true,
-  "url": "/notes",
-  "fails": [],
-  "count": 0,
-  "total": 87
- },
- {
-  "dark": true,
-  "url": "/layout-components",
-  "fails": [
-   {
-    "t": "$",
-    "tag": "SPAN",
-    "r": 2.98,
-    "min": 4.5,
-    "fg": "rgb(92,99,108)",
-    "bg": "rgb(20,22,26)",
-    "size": 18,
-    "weight": 400
-   }
-  ],
-  "count": 1,
-  "total": 333
- }
+  {
+    "dark": false,
+    "url": "/",
+    "fails": [],
+    "count": 0,
+    "total": 70
+  },
+  {
+    "dark": false,
+    "url": "/log",
+    "fails": [],
+    "count": 0,
+    "total": 91
+  },
+  {
+    "dark": false,
+    "url": "/articles",
+    "fails": [],
+    "count": 0,
+    "total": 243
+  },
+  {
+    "dark": false,
+    "url": "/articles/how-i-built-this-site",
+    "fails": [],
+    "count": 0,
+    "total": 191
+  },
+  {
+    "dark": false,
+    "url": "/tools",
+    "fails": [],
+    "count": 0,
+    "total": 105
+  },
+  {
+    "dark": false,
+    "url": "/notes",
+    "fails": [],
+    "count": 0,
+    "total": 87
+  },
+  {
+    "dark": false,
+    "url": "/layout-components",
+    "fails": [
+      {
+        "t": "$",
+        "tag": "SPAN",
+        "r": 2.98,
+        "min": 4.5,
+        "fg": "rgb(92,99,108)",
+        "bg": "rgb(20,22,26)",
+        "size": 18,
+        "weight": 400
+      },
+      {
+        "t": "popular",
+        "tag": "SPAN",
+        "r": 1,
+        "min": 4.5,
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(255,255,255)",
+        "size": 10,
+        "weight": 700
+      }
+    ],
+    "count": 2,
+    "total": 333
+  },
+  {
+    "dark": true,
+    "url": "/",
+    "fails": [],
+    "count": 0,
+    "total": 70
+  },
+  {
+    "dark": true,
+    "url": "/log",
+    "fails": [],
+    "count": 0,
+    "total": 91
+  },
+  {
+    "dark": true,
+    "url": "/articles",
+    "fails": [
+      {
+        "t": "# local dev server at localhost:4321",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      },
+      {
+        "t": "# static output into dist/",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      },
+      {
+        "t": "# astro check + ESLint + Prettier",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      }
+    ],
+    "count": 3,
+    "total": 243
+  },
+  {
+    "dark": true,
+    "url": "/articles/how-i-built-this-site",
+    "fails": [
+      {
+        "t": "# local dev server at localhost:4321",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      },
+      {
+        "t": "# static output into dist/",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      },
+      {
+        "t": "# astro check + ESLint + Prettier",
+        "tag": "SPAN",
+        "r": 3.05,
+        "min": 4.5,
+        "fg": "rgb(106,115,125)",
+        "bg": "rgb(36,41,46)",
+        "size": 14.2222,
+        "weight": 400
+      }
+    ],
+    "count": 3,
+    "total": 191
+  },
+  {
+    "dark": true,
+    "url": "/tools",
+    "fails": [],
+    "count": 0,
+    "total": 105
+  },
+  {
+    "dark": true,
+    "url": "/notes",
+    "fails": [],
+    "count": 0,
+    "total": 87
+  },
+  {
+    "dark": true,
+    "url": "/layout-components",
+    "fails": [
+      {
+        "t": "$",
+        "tag": "SPAN",
+        "r": 2.98,
+        "min": 4.5,
+        "fg": "rgb(92,99,108)",
+        "bg": "rgb(20,22,26)",
+        "size": 18,
+        "weight": 400
+      }
+    ],
+    "count": 1,
+    "total": 333
+  }
 ]

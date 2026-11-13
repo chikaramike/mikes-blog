@@ -2,3 +2,6 @@ dist
 node_modules
 .github
 .changeset
+
+# Synced from the canonical writing guide in shakti-workspace.
+/voice.md

@@ -35,25 +35,25 @@ Knowing both numbers for each plan is most of the skill.
 
 My defaults as of November 2026:
 
-| Harness | Daily default | When it needs to think harder | Notes |
-|---|---|---|---|
-| Claude Code | Sonnet 5.5 | Opus 5.5 | Sonnet 5.5 has the higher score on Anthropic's own terminal coding benchmark. I keep Opus for long planning and the hardest 20% of the work. Haiku 5.5 handles quick small jobs. |
-| Codex | GPT-6 Luna | GPT-6.1 Sol | On ChatGPT Plus, the estimate is 350 to 3,000 Luna messages per 5 hours vs 15 to 160 for Sol. I skip GPT-6 Astra for agent work: in Nous Research's HermesIndex it scored lower than Opus 5.5 at more than twice the cost per task. |
-| OpenCode or Pi on OpenCode Go | DeepSeek V4.1 Flash | GLM-5.3 or Kimi K3 | DeepSeek V4.1 Flash has the largest monthly allowance on Go ($100 of usage) and sits on the cost frontier in HermesIndex. |
-| Hermes | A cheap open model | Sonnet 5.5 as the critic | Run routine and scheduled work cheap. Send one hard step, or a review, to a strong model, then switch back. |
-| Copilot | Inline completions | n/a | For code I am writing myself. |
-| T3 Code, herdr | Whatever the harness behind them uses | | They do not choose models. |
+| Harness                       | Daily default                         | When it needs to think harder | Notes                                                                                                                                                                                                                               |
+| ----------------------------- | ------------------------------------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Claude Code                   | Sonnet 5.5                            | Opus 5.5                      | Sonnet 5.5 has the higher score on Anthropic's own terminal coding benchmark. I keep Opus for long planning and the hardest 20% of the work. Haiku 5.5 handles quick small jobs.                                                    |
+| Codex                         | GPT-6 Luna                            | GPT-6.1 Sol                   | On ChatGPT Plus, the estimate is 350 to 3,000 Luna messages per 5 hours vs 15 to 160 for Sol. I skip GPT-6 Astra for agent work: in Nous Research's HermesIndex it scored lower than Opus 5.5 at more than twice the cost per task. |
+| OpenCode or Pi on OpenCode Go | DeepSeek V4.1 Flash                   | GLM-5.3 or Kimi K3            | DeepSeek V4.1 Flash has the largest monthly allowance on Go ($100 of usage) and sits on the cost frontier in HermesIndex.                                                                                                           |
+| Hermes                        | A cheap open model                    | Sonnet 5.5 as the critic      | Run routine and scheduled work cheap. Send one hard step, or a review, to a strong model, then switch back.                                                                                                                         |
+| Copilot                       | Inline completions                    | n/a                           | For code I am writing myself.                                                                                                                                                                                                       |
+| T3 Code, herdr                | Whatever the harness behind them uses |                               | They do not choose models.                                                                                                                                                                                                          |
 
 The pattern is the same everywhere: a cheap model does the volume, and a strong model does the few steps where quality decides the result.
 
 ## How to see your usage
 
-| Plan | Where to look |
-|---|---|
-| Claude | `/usage` inside Claude Code (5-hour and weekly bars with reset times), or Settings > Usage on claude.ai |
-| ChatGPT / Codex | `/status` inside the Codex CLI, or the Codex usage page in ChatGPT settings |
-| OpenCode Go | The usage view in the OpenCode console. Each model has its own 5-hour, weekly, and monthly limit. |
-| Nous Portal | Your credit balance in the portal. In Hermes, turn on the cost display so each reply shows what it spent. |
+| Plan                | Where to look                                                                                                                                 |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Claude              | `/usage` inside Claude Code (5-hour and weekly bars with reset times), or Settings > Usage on claude.ai                                       |
+| ChatGPT / Codex     | `/status` inside the Codex CLI, or the Codex usage page in ChatGPT settings                                                                   |
+| OpenCode Go         | The usage view in the OpenCode console. Each model has its own 5-hour, weekly, and monthly limit.                                             |
+| Nous Portal         | Your credit balance in the portal. In Hermes, turn on the cost display so each reply shows what it spent.                                     |
 | Several coding CLIs | `npx ccusage@latest` reads the logs that Claude Code, Codex, and other CLIs save on your machine and reports cost by day, model, and session. |
 
 Then turn off surprise billing. Anthropic lets you buy extra usage at API rates after your limit, and OpenCode Zen can auto-reload a balance. Both are useful on purpose and expensive by accident. Turn them on only when you decide to.
@@ -62,22 +62,22 @@ Then turn off surprise billing. Anthropic lets you buy extra usage at API rates 
 
 Here is the split stack I run, at the prices listed on 2026-11-13:
 
-| Plan | Price per month | What it adds |
-|---|---|---|
-| Claude Pro | $20 | Claude apps, Claude Code, Opus and Sonnet |
-| ChatGPT Plus | $20 | ChatGPT apps, Codex, GPT-6.x models, Deep Research |
-| Nous Portal Plus | $20 | $22 of credits for 300+ models, plus web search, image, and voice tools for Hermes |
-| OpenCode Go | $10 | Open models for high-volume coding in OpenCode and Pi |
-| GitHub Copilot Pro | $10 | Completions and chat in VS Code |
-| **Total** | **about $80** | |
+| Plan               | Price per month | What it adds                                                                       |
+| ------------------ | --------------- | ---------------------------------------------------------------------------------- |
+| Claude Pro         | $20             | Claude apps, Claude Code, Opus and Sonnet                                          |
+| ChatGPT Plus       | $20             | ChatGPT apps, Codex, GPT-6.x models, Deep Research                                 |
+| Nous Portal Plus   | $20             | $22 of credits for 300+ models, plus web search, image, and voice tools for Hermes |
+| OpenCode Go        | $10             | Open models for high-volume coding in OpenCode and Pi                              |
+| GitHub Copilot Pro | $10             | Completions and chat in VS Code                                                    |
+| **Total**          | **about $80**   |                                                                                    |
 
 The single-plan options at the top end:
 
-| Plan | Price per month | Notes |
-|---|---|---|
-| Claude Max | $100 | 5x Pro usage, plus $100 a month of API credit for the Agent SDK and `claude -p` |
-| Claude Ultra | $200 | The plan formerly called Max 20x, with $200 of API credit |
-| ChatGPT Pro | from $100 | No 5-hour limit in Codex |
+| Plan         | Price per month | Notes                                                                           |
+| ------------ | --------------- | ------------------------------------------------------------------------------- |
+| Claude Max   | $100            | 5x Pro usage, plus $100 a month of API credit for the Agent SDK and `claude -p` |
+| Claude Ultra | $200            | The plan formerly called Max 20x, with $200 of API credit                       |
+| ChatGPT Pro  | from $100       | No 5-hour limit in Codex                                                        |
 
 **Why the split works for me:**
 
