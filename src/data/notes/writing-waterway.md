@@ -8,7 +8,7 @@ tags:
   - garden
 ---
 
-I am considering "writing waterway" as another name for this site. The image starts with drops, which gather into streams, join into rivers, and eventually reach an ocean. It gives me a way to describe small observations becoming connected writing.
+I am considering "writing waterway" as another name for this site. The image starts with drops, which can gather into streams, join into rivers, and reach an ocean. It gives me a way to describe small observations becoming connected writing, while leaving room for ideas that stay local or evaporate.
 
 ## A possible shape
 
@@ -32,6 +32,8 @@ A quick search did not surface an established blogging framework called "writing
 
 ## What I need to test
 
-A waterway suggests movement and connection. It also risks making every small thought sound as though it must become a large article, or making older writing seem permanently downstream. Some drops should stay small. Revision should still be possible anywhere in the system.
+A waterway suggests movement and connection, but a drop does not have to reach the ocean. An idea can evaporate when I lose interest or find that it does not hold up. It can also stay in a local water cycle, returning as a question or a small note that helps with one part of my work. Neither path needs to produce a larger article to be useful.
+
+That makes the metaphor less linear. Some ideas join a wider conversation. Others circulate close to where they began, or return later in a different form. Revision should still be possible anywhere in the system.
 
 For now, I will keep this as a possible framing alongside [why I am building a digital garden](../articles/why-a-digital-garden.md). The next test is whether drops, streams, and rivers make the site easier for a new reader to understand.
