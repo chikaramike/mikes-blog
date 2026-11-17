@@ -35,7 +35,10 @@ const peopleWithMentions = people
         .filter((related) => related.data.people?.includes(person.id))
         .map((related) => ({ entry: related, path: 'articles' })),
     ],
-  }));
+  }))
+  // Only people mentioned by at least one live entry are shown.
+  .filter(({ mentions }) => mentions.length > 0);
+const visiblePeopleIds = new Set(peopleWithMentions.map(({ person }) => person.id));
 const sections = [
   { label: 'Log', entries: logs, path: 'log' },
   { label: 'Notes', entries: notes, path: 'notes' },
@@ -90,7 +93,7 @@ const sections = [
                       <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-2">
                         {person.data.relatedPeople.map((relatedPersonId) => {
                           const relatedPerson = peopleById.get(relatedPersonId);
-                          return relatedPerson ? (
+                          return relatedPerson && visiblePeopleIds.has(relatedPersonId) ? (
                             <li>
                               <a class="text-primary hover:underline" href={`#${relatedPerson.id}`}>
                                 {relatedPerson.data.title}
@@ -121,7 +124,7 @@ const sections = [
               ))}
             </div>
           ) : (
-            <p class="mt-4 text-muted">No people have been added yet.</p>
+            <p class="mt-4 text-muted">People appear here once a garden entry mentions them.</p>
           )}
         </section>
       ) : (
