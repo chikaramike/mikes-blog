@@ -12,6 +12,6 @@ I added two new ways to connect the garden.
 
 The [Toolkit](/tools) is a collection of the software and services I use. Each entry links to the tool's website and can include learning resources and related writing on this site. The index makes it easier to link to a consistent reference whenever a tool comes up in a note or article.
 
-The [People map](../maps/people.md) gathers the writers, researchers, and builders whose work shapes my thinking. A profile can include a homepage, useful links, and explicit connections to other people. Notes, articles, and log entries can identify people in their frontmatter, so the map can show where their ideas appear without trying to infer a mention from prose.
+The People map gathers the writers, researchers, and builders whose work shapes my thinking. A profile can include a homepage, useful links, and explicit connections to other people. Notes, articles, and log entries can identify people in their frontmatter, so the map can show where their ideas appear without trying to infer a mention from prose.
 
 Both structures are intentionally simple. They make the garden more useful now while leaving room for richer connections as the writing grows.
