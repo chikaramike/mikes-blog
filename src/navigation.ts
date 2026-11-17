@@ -25,12 +25,7 @@ export const footerData = {
     },
     {
       title: 'About this site',
-      links: [
-        { text: 'Home', href: getPermalink('/') },
-        { text: 'Privacy', href: getPermalink('/privacy') },
-        { text: 'Terms', href: getPermalink('/terms') },
-        { text: 'Layout components', href: getPermalink('/layout-components') },
-      ],
+      links: [{ text: 'Home', href: getPermalink('/') }],
     },
   ],
   secondaryLinks: [],
