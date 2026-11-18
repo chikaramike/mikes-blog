@@ -6,6 +6,14 @@ const partytown = !!ANALYTICS?.vendors?.googleAnalytics?.partytown;
 const scriptType = partytown ? 'text/partytown' : undefined;
 ---
 
+<!-- Cloudflare Web Analytics: cookie-free. Token is public and appears in page HTML.
+     No SRI hash: Cloudflare updates beacon.min.js in place, so a pinned hash would break it. -->
+<script
+  is:inline
+  defer
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "d4f3151a479446338745441f65b7d688"}'></script>
+
 {id && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} type={scriptType} />}
 
 <script is:inline id="ga-init" data-id={id} type={id ? scriptType : undefined}>
