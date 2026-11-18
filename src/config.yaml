@@ -19,7 +19,7 @@ metadata:
   openGraph:
     site_name: mikes.blog
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/og-default.png'
         width: 1200
         height: 628
     type: website
